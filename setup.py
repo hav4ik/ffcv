@@ -84,12 +84,12 @@ extension_kwargs = {
     'include_dirs': []
 }
 if platform.system() == 'Windows':
-    extension_kwargs = pkgconfig_windows('opencv4', extension_kwargs)
+    extension_kwargs = pkgconfig_windows('opencv', extension_kwargs)
     extension_kwargs = pkgconfig_windows('libturbojpeg', extension_kwargs)
 
     extension_kwargs = pkgconfig_windows('pthread', extension_kwargs)
 else:
-    extension_kwargs = pkgconfig('opencv4', extension_kwargs)
+    extension_kwargs = pkgconfig('opencv', extension_kwargs)
     extension_kwargs = pkgconfig('libturbojpeg', extension_kwargs)
 
     extension_kwargs['libraries'].append('pthread')
